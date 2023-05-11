@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="preload">
+<head>
+    <!-- Made by Sven (Sven1222225) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Ardougne Zoo</title>
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com/3.3.1"></script>
+    
+    <script src="https://github.com/js/app.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brown': '#52351e',
+                        'brown-light': '#c0a886',
+                        'brown-very-light': '#d8ccb4',
+                    },
+                }
+            }
+        }
+    </script>
+
+    
+
+    <style type="text/css">html.preload *{transition: none !important}</style>
+    <style type="text/tailwindcss">
+            @tailwind base;
+            @tailwind components;
+    
+            @layer components {
+                #userMainContent{
+                    box-shadow: 0 0 7px rgba(0,0,0,0.15);
+                }
+            }
+    
+            @tailwind utilities;
+        </style>
+</head>
+<body class="bg-brown-light">
+        
+        <div class="flex flex-row relative justify-between overflow-x-hidden">
+            <div class="flex-grow min-w-0">
+                <style type="text/tailwindcss">
+    @tailwind base;
+    @tailwind components;
+
+    @layer components {
+        #main-title{
+            background-image: url('/img/titleBg-left.png'), url('/img/titleBg-right.png'), url('/img/titleBg-center.png');
+            background-repeat: no-repeat, no-repeat, repeat-x;
+            background-size: auto 100%, auto 100%, auto 100%;
+            background-position: left, right, center;
+        }
+    }
+
+    @tailwind utilities;
+</style>
+
+<h1 id="main-title" class="text-center text-2xl md:text-5xl font-bold font-sans text-yellow-100 ml-8 mr-24 md:mx-24 py-3 md:py-5 mt-4 mb-16">
+    <a href="https://github.com">Ardougne Zoo</a>
+</h1>
+                <main id="userMainContent" class="p-3 mx-2 lg:mx-4 mb-4 bg-[#e2dbc8] break-words rounded">
+                    <h2 class="text-center text-brown font-bold text-3xl">Wolf</h2>
+    <img src="https://github.com/img/wolf.png" alt="A picture of a Wolf." class="m-auto my-16 p-2 rounded border-brown-light border-4 bg-brown-very-light shadow-xl">
+    
+    
+        <p>Welcome to the Wolf Sanctuary at Ardougne Zoo, where you can witness the magnificence of these iconic and fascinating creatures up close. Wolves, renowned for their beauty and enigmatic nature, are the focus of our captivating exhibit.</p>
+
+        
+                    <br>
+        
+    
+        <p>Wolves, belonging to the Canidae family, are highly social and intelligent animals. They live in tight-knit packs led by an alpha pair, and their complex social structure is a sight to behold. Visitors to our sanctuary will have the unique opportunity to observe the intricate dynamics of a wolf pack, witnessing their cooperative hunting strategies, communication through howls, and the strong bonds they form with their pack mates.</p>
+
+        
+                    <br>
+        
+    
+        <p>These incredible predators possess a range of adaptations that make them exceptional hunters. Their keen senses of hearing, smell, and sight allow them to navigate their environment with precision. With powerful jaws and sharp teeth, wolves are well-equipped to take down prey and maintain their position as apex predators.</p>
+
+        
+                    <br>
+        
+    
+        <p>At Ardougne Zoo, we prioritize conservation efforts and education. Our dedicated staff will provide valuable insights into the ecological importance of wolves and the challenges they face in the wild. Learn about ongoing conservation initiatives and how you can contribute to protecting these remarkable animals and their habitats.</p>
+
+        
+                    <br>
+        
+    
+        <p>As you explore our Wolf Sanctuary, take in the splendor of their striking physical features. Wolves come in a variety of colors and patterns, including the iconic gray timber wolves, arctic white wolves, and even rare black wolves. Each individual boasts its own unique personality, making every encounter a truly unforgettable experience.</p>
+
+        
+                    <br>
+        
+    
+        <p>Join us at Ardougne Zoo and embark on a journey of discovery and appreciation for the captivating world of wolves. Witness their majestic presence, learn about their critical role in ecosystems, and be inspired to protect these magnificent creatures for generations to come.</p>
+                </main>
+
+                <footer class="flex gap-4 justify-center">
+    <a class="text-brown hover:underline text-sm" href="https://github.com/privacy">Privacy policy</a>    <a class="text-brown hover:underline text-sm" href="https://github.com/imprint">Imprint</a></footer>            </div>
+    
+            <div>
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+
+        @layer components {
+            #main-nav{
+                margin-right: -150px;
+                width: 150px;
+                transition: margin-right 750ms, opacity 750ms;
+                flex-shrink: 0;
+                background-color: #c0a886;
+                opacity: 0;
+            }
+            @media(max-width: 1023px){
+                #main-nav{
+                    box-shadow: 0 0 7px rgba(0,0,0,0.15);
+                }
+            }
+            #main-nav.open{
+                margin-right: 0;
+                opacity: 1;
+            }
+            #main-nav ~ #spacer{
+                transition: margin-right 750ms;
+                margin-right: -150px;
+                width: 150px;
+                flex-shrink: 0;
+            }
+            @media(min-width: 1024px){
+                #main-nav.open ~ #spacer{
+                    margin-right: 0;
+                }
+            }
+            #main-nav-burger-menu{
+                width: 60px;
+                height: 45px;
+                position: relative;
+                margin: 10px;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+            }
+            #main-nav-burger-menu span{
+                display: block;
+                position: absolute;
+                height: 9px;
+                width: 100%;
+                background: #52351e;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .25s ease-in-out;
+                -moz-transition: .25s ease-in-out;
+                -o-transition: .25s ease-in-out;
+                transition: .25s ease-in-out;
+            }
+            #main-nav-burger-menu span:nth-child(1){
+                top: 0px;
+            }
+            #main-nav-burger-menu span:nth-child(2),#main-nav-burger-menu span:nth-child(3){
+                top: 18px;
+            }
+            #main-nav-burger-menu span:nth-child(4){
+                top: 36px;
+            }
+            #main-nav.open ~ div #main-nav-burger-menu span:nth-child(1){
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+            #main-nav.open ~ div #main-nav-burger-menu span:nth-child(2){
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            #main-nav.open ~ div #main-nav-burger-menu span:nth-child(3){
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            #main-nav.open ~ div #main-nav-burger-menu span:nth-child(4){
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+
+        @tailwind utilities;
+    </style>
+</div>
+
+
+
+<nav id="main-nav" class="fixed h-screen top-0 right-0 p-2 pl-6 lg:pl-2 pt-[136px] md:pt-[168px]">
+
+    <span class="block text-[#444] font-bold mb-4 lg:mb-3 text-xl">Navigation</span>
+
+    <ul>
+        <li class="mb-3 lg:mb-2">
+            <a class="text-brown hover:underline text-xl" href="https://github.com">Home</a>        </li>
+        <li class="mb-3 lg:mb-2">
+            <a class="text-brown hover:underline text-xl" href="https://github.com/animal">Animal List</a>        </li>
+        <li class="mb-3 lg:mb-2">
+            <a class="text-brown hover:underline text-xl" href="https://github.com/about">About us</a>        </li>
+    </ul>
+
+</nav>
+
+<div id="spacer"></div>
+
+<div class="fixed top-0 right-0">
+    <div id="main-nav-burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>        </div>
+    </body>
+</html>
