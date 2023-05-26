@@ -29,7 +29,7 @@
 
     
 
-    <style type="text/css">html.preload *{transition: none !important}</style>
+    <style>html.preload *{transition: none !important}</style>
     <style type="text/tailwindcss">
             @tailwind base;
             @tailwind components;
@@ -74,11 +74,11 @@
                 <main id="userMainContent" class="p-3 mx-2 lg:mx-4 mb-4 bg-[#e2dbc8] break-words rounded">
                     <div id="privacy">
         <h4>Datenschutzerklärung</h4>
-
+        
         <p>Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen. Datenschutz hat einen besonders hohen Stellenwert für die Geschäftsleitung der Ardougne Zoo. Eine Nutzung der Internetseiten der Ardougne Zoo ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.</p>
-
+        
         <p>Die Verarbeitung personenbezogener Daten, beispielsweise des Namens, der Anschrift, E-Mail-Adresse oder Telefonnummer einer betroffenen Person, erfolgt stets im Einklang mit der Datenschutz-Grundverordnung und in Übereinstimmung mit den für die Ardougne Zoo geltenden landesspezifischen Datenschutzbestimmungen. Mittels dieser Datenschutzerklärung möchte unser Unternehmen die Öffentlichkeit über Art, Umfang und Zweck der von uns erhobenen, genutzten und verarbeiteten personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels dieser Datenschutzerklärung über die ihnen zustehenden Rechte aufgeklärt.</p>
-
+        
         <p>Die Ardougne Zoo hat als für die Verarbeitung Verantwortlicher zahlreiche technische und organisatorische Maßnahmen umgesetzt, um einen möglichst lückenlosen Schutz der über diese Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet werden kann. Aus diesem Grund steht es jeder betroffenen Person frei, personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch, an uns zu übermitteln.</p>
 
         <h4>1. Begriffsbestimmungen</h4>
@@ -271,7 +271,7 @@
     </div>
                 </main>
 
-                <footer class="flex gap-4 justify-center">
+                <footer class="flex gap-4 mb-2 justify-center">
     <a class="text-brown hover:underline text-sm" href="https://sven1222225.github.io/ardougne-zoo/privacy">Privacy policy</a>    <a class="text-brown hover:underline text-sm" href="https://sven1222225.github.io/ardougne-zoo/imprint">Imprint</a></footer>            </div>
     
             <div>
@@ -296,6 +296,11 @@
             #main-nav.open{
                 margin-right: 0;
                 opacity: 1;
+            }
+            @media(max-width: 1023px){
+                #main-nav.open #cover{
+                    display: block;
+                }
             }
             #main-nav ~ #spacer{
                 transition: margin-right 750ms;
@@ -380,7 +385,9 @@
 
 
 
-<nav id="main-nav" class="fixed h-screen top-0 right-0 p-2 pl-6 lg:pl-2 pt-[136px] md:pt-[168px]">
+<nav id="main-nav" class="fixed overflow-auto h-screen top-0 right-0 p-2 pl-6 lg:pl-2 pt-[136px] md:pt-[168px]">
+
+    <span id="cover" class="fixed hidden inset-0 -z-10"></span>
 
     <span class="block text-[#444] font-bold mb-4 lg:mb-3 text-xl">Navigation</span>
 

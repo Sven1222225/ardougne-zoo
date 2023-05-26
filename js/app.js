@@ -2,6 +2,7 @@ setNavMenuFromCookie();
 removePreload();
 
 document.getElementById('main-nav-burger-menu').addEventListener('click', toggleBurgerMenu);
+document.querySelector('#main-nav #cover').addEventListener('click', toggleBurgerMenu);
 
 
 //------------------ Actions

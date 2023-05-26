@@ -29,7 +29,7 @@
 
     
 
-    <style type="text/css">html.preload *{transition: none !important}</style>
+    <style>html.preload *{transition: none !important}</style>
     <style type="text/tailwindcss">
             @tailwind base;
             @tailwind components;
@@ -76,7 +76,7 @@
     <p>Discover a world of vibrant colors and captivating melodies at Ardougne Zoo. We are thrilled to announce the arrival of our newest residents - a delightful flock of parrots. Get ready to be enchanted by their beauty, intelligence, and playful personalities. Visit our zoo and experience the wonders of these magnificent feathered creatures firsthand.</p>
                 </main>
 
-                <footer class="flex gap-4 justify-center">
+                <footer class="flex gap-4 mb-2 justify-center">
     <a class="text-brown hover:underline text-sm" href="https://sven1222225.github.io/ardougne-zoo/privacy">Privacy policy</a>    <a class="text-brown hover:underline text-sm" href="https://sven1222225.github.io/ardougne-zoo/imprint">Imprint</a></footer>            </div>
     
             <div>
@@ -101,6 +101,11 @@
             #main-nav.open{
                 margin-right: 0;
                 opacity: 1;
+            }
+            @media(max-width: 1023px){
+                #main-nav.open #cover{
+                    display: block;
+                }
             }
             #main-nav ~ #spacer{
                 transition: margin-right 750ms;
@@ -185,7 +190,9 @@
 
 
 
-<nav id="main-nav" class="fixed h-screen top-0 right-0 p-2 pl-6 lg:pl-2 pt-[136px] md:pt-[168px]">
+<nav id="main-nav" class="fixed overflow-auto h-screen top-0 right-0 p-2 pl-6 lg:pl-2 pt-[136px] md:pt-[168px]">
+
+    <span id="cover" class="fixed hidden inset-0 -z-10"></span>
 
     <span class="block text-[#444] font-bold mb-4 lg:mb-3 text-xl">Navigation</span>
 
