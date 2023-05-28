@@ -1,12 +1,18 @@
 setNavMenuFromCookie();
 removePreload();
+startAdChanger();
 
 document.getElementById('main-nav-burger-menu').addEventListener('click', toggleBurgerMenu);
 document.querySelector('#main-nav #cover').addEventListener('click', toggleBurgerMenu);
 
 
-//------------------ Actions
 
+
+
+
+
+
+//------------------ Actions
 
 function setNavMenuFromCookie(){
     const cookieValue = getCookie('main-nav-burger-menu').toLowerCase();
@@ -75,4 +81,36 @@ function getCookie(cname){
     }
 
     return "";
+}
+
+
+//------------------ Advertising
+
+function startAdChanger() {
+    let item = processAdChanger();
+    loopAdChanger(item);
+}
+
+function loopAdChanger(lastAd = null){
+    setTimeout(() => {
+        let item = processAdChanger(lastAd);
+
+        loopAdChanger(item);
+    }, 20000); //20s
+}
+
+function processAdChanger(lastAd = null){
+    //hide previous ad
+    lastAd && lastAd.classList.add('hidden');
+
+    //get all ads
+    let items = Array.from(document.querySelectorAll('[class|="ad-item"]'));
+    //remove previous ad
+    lastAd && items.splice(items.indexOf(lastAd), 1);
+    //select random ad
+    let selectedItem = items[Math.floor(Math.random()*items.length)];
+    //show new ad
+    selectedItem.classList.remove('hidden');
+
+    return selectedItem;
 }
