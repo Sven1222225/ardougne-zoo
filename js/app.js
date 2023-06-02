@@ -104,7 +104,7 @@ function processAdChanger(lastAd = null){
     lastAd && lastAd.classList.add('hidden');
 
     //get all ads
-    let items = Array.from(document.querySelectorAll('[class|="ad-item"]'));
+    let items = Array.from(document.querySelectorAll('[class*="ad-item"]'));
     //remove previous ad
     lastAd && items.splice(items.indexOf(lastAd), 1);
     //select random ad
